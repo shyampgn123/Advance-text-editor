@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <title>Advanced text editor</title>
+</head>
+<body>
+  <div class="main">
+    <div class="btns">
+      <button class="btn-bold obtn op" id="bold" title="Bold"><i class="material-icons">format_bold</i></button>
+        <button class="btn-italic obtn op" id="italic" title="Italic"><i class="material-icons">format_italic</i></button>
+        <button class="btn-underline obtn op" id="underline" title="Underline"><i class="material-icons">format_underlined</i></button>
+        <button class="btn-lineThrough obtn op" id="strikethrough" title="Strikethrough"><i class="material-icons">format_strikethrough</i></button>
+        <button class="btn-sub obtn op" id="subscript" title="Subscript"><i class="material-icons">subscript</i></button>
+        <button class="btn-super obtn op" id="superscript" title="Superscript"><i class="material-icons">superscript</i></button>
+        <button class="btn-numList obtn op" id="insertOrderedList" title="Numbered List"><i class="material-icons">format_list_numbered</i></button>
+        <button class="btn-dotList obtn op" id="insertUnorderedList" title="Bulleted List"><i class="material-icons">format_list_bulleted</i></button>
+        <button class="btn-undo obtn np" id="undo" title="Undo"><i class="material-icons">undo</i></button>
+        <button class="btn-redo obtn np" id="redo" title="Redo"><i class="material-icons">redo</i></button>
+        <button class="btn-link obtn np" id="createlink" title="Insert Link"><i class="material-icons">link</i></button>
+        <button class="btn-alignL obtn np" id="justifyleft" title="Align Left"><i class="material-icons">format_align_left</i></button>
+        <button class="btn-alignC obtn np" id="justifycenter" title="Align Center"><i class="material-icons">format_align_center</i></button>
+        <button class="btn-alignR obtn np" id="justifyright" title="Align Right"><i class="material-icons">format_align_right</i></button>
+        
+        <select class="sel-hed selopt" id="formatBlock" title="Heading Style">
+          <option value="h1">h1</option>
+          <option value="h2">h2</option>
+          <option value="h3">h3</option>
+          <option value="h4">h4</option>
+          <option value="h5">h5</option>
+          <option value="h6">h6</option>
+        </select>
+        
+        <select class="select-fontfam selopt" id="fontName" title="Font Family">
+          <option value="Arial">Arial</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Cursive">Cursive</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Monospace">Monospace</option>
+          <option value="Tahoma">Tahoma</option>
+          <option value="Trebuchet MS">Trebuchet MS</option>
+          <option value="Helvetica">Helvetica</option>
+          <option value="Impact">Impact</option>
+        </select>
+
+        <select class="selfnts selopt" id="fontSize" title="Font Size">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        
+        <div class="pick-color">
+          <label for="colorPickerfont">Text:</label>
+          <input type="color" id="colorPickerfont" title="Text Color">
+        </div>
+        
+        <div class="pick-color">
+          <label for="colorPickerback">Highlight:</label>
+          <input type="color" id="colorPickerback" title="Highlight Color">
+        </div>
+        
+        <button class="btn-downlode" id="downloadBtn" title="Download as PDF"><span>Page</span>
+          <i class="material-icons">file_download</i>
+        </button>
+    </div>
+    <div class="text-box" id="text-box" contenteditable="true"></div>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js" type="text/javascript" charset="utf-8"></script>
+</html>
